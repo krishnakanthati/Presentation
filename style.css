@@ -5,7 +5,7 @@ body {
   padding: 0;
   width: 100%;
   box-sizing: border-box;
-  background: lightblue;
+  background: lightgreen;
   font-family: "Roboto Slab", serif;
 }
 
@@ -14,6 +14,17 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px;
+}
+
+.plus {
+  display: flex;
+  flex-direction: column;
+}
+
+.plus .img {
+  width: 220px;
+  height: 150px;
+  margin: 25px;
 }
 
 img {

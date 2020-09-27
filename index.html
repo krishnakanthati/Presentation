@@ -9,6 +9,10 @@
   <body>
     <div class="frame">
       <img class="img" src="x.jpg" alt="" />
+      <div class="plus">
+        <img class="plusone img" src="x.jpg" alt="">
+        <img class="plustwo img" src="x.jpg" alt="">
+      </div>
     </div>
       <div class="toggle">
         <button onclick="pic('prev');color();">previous</button>
@@ -18,8 +22,7 @@
     <script type="text/javascript">
       var clickcount = 0;
         function pic(i) {
-  
-            const a = ['x.jpg', 'a.jpg','b.jpg', 'c.jpg', 'd.jpg','e.png','f.png', 'g.png', 'h.jpg'];
+            const a = ['x.jpg', 'a.jpg','b.jpg', 'c.jpg', 'd.jpg','e.png','f.png', 'g.png', 'h.jpg', 'i.png', 'j.jpg', 'k.png', 'l.png', 'm.jpg', 'n.png', 'o.png', 'p.png', 'q.jpg', 'r.jpg','s.jpg', 't.png', 'u.jpg', 'v.jpg', 'w.jpg'];
             if (i === 'next') {
                 clickcount = Number(clickcount) + 1;
             } else {
@@ -27,7 +30,11 @@
             }
             console.log(clickcount)
             const img = document.querySelector(".img");
+            const plusone = document.querySelector(".plusone");
+            const plustwo = document.querySelector(".plustwo");
             img.src = a[clickcount];
+            plusone.src = a[clickcount + 1];
+            plustwo.src = a[clickcount + 2];
         }
         function color() {
             var x = Math.floor(Math.random() * 256);
