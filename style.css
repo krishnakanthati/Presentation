@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: lightblue;
+  font-family: "Roboto Slab", serif;
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+img {
+  width: 800px;
+  height: 420px;
+  border: 3px solid #fff;
+  border-radius: 15px;
+  box-shadow: 5px 4px #333;
+  cursor: pointer;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 120px;
+}
+
+button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: #000;
+  background-color: green;
+  border: 3px solid #000;
+  outline: none;
+  transition: 0.5s;
+  font-size: 1.9em;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: "Caveat", cursive;
+}
+
+button:active {
+  transform: scale(0.5);
+}

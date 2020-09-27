@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sheryl Sandberg</title>
+  </head>
+  <body>
+    <div class="frame">
+      <img class="img" src="x.jpg" alt="" />
+    </div>
+      <div class="toggle">
+        <button onclick="pic('prev');color();">previous</button>
+        <button onclick="pic('next');color();">next</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+        function pic(i) {
+            const a = ['x.jpg', 'a.jpg','b.jpg', 'c.jpg', 'd.jpg','e.png','f.png', 'g.png', 'h.jpg'];
+            if (i === 'next') {
+                localStorage.clickcount = Number(localStorage.clickcount) + 1;
+            } else {
+                localStorage.clickcount = Number(localStorage.clickcount) - 1;
+            }
+            console.log(localStorage.clickcount)
+            const img = document.querySelector(".img");
+            img.src = a[localStorage.clickcount];   
+        }
+        function color() {
+            var x = Math.floor(Math.random() * 256);
+            var y = Math.floor(Math.random() * 256);
+            var z = Math.floor(Math.random() * 256);
+            var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+            const col = document.body;
+            col.style.background = bgColor;
+        }
+      </script>
+</body>
+</html>
